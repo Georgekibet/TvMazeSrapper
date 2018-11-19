@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2050
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TvMazeScrapper", "TvMazeScrapper\TvMazeScrapper.csproj", "{B493F9BC-3CF7-4166-A1D4-3A4F149E88E9}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B493F9BC-3CF7-4166-A1D4-3A4F149E88E9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B493F9BC-3CF7-4166-A1D4-3A4F149E88E9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B493F9BC-3CF7-4166-A1D4-3A4F149E88E9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B493F9BC-3CF7-4166-A1D4-3A4F149E88E9}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {ECCA01E4-AB20-48F3-8097-073D9D99412F}
+	EndGlobalSection
+EndGlobal
