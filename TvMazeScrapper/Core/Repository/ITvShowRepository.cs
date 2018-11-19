@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using TvMazeScrapper.Core.Models;
 
 namespace TvMazeScrapper.Core.Repository
 {
@@ -11,6 +12,6 @@ namespace TvMazeScrapper.Core.Repository
 
        IEnumerable<TvShow> GetAll();
        IEnumerable<TvShow> GetAllPaginated(int skip,int take);
-
+       
    }
 }

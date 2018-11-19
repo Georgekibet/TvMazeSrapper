@@ -5,34 +5,36 @@ using System.Runtime.InteropServices.ComTypes;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using TvMazeScrapper.Context;
+using TvMazeScrapper.Core.Models;
 
 namespace TvMazeScrapper.Core.Repository.Impl
 {
     public class TvShowRepository :ITvShowRepository
     {
+        private MazeContext _dbContext;
+    
         public void Save(TvShow tvShow)
         {
-            using (var ctx= new MazeContext(new DbContextOptions<MazeContext>()))
-            {
-                ctx.TvShows.Add(tvShow);
-                ctx.SaveChanges();
-            }
+          
+                _dbContext.TvShows.Add(tvShow);
+                _dbContext.SaveChanges();
+            
         }
 
         public IEnumerable<TvShow> GetAll()
         {
-            using (var ctx = new MazeContext(new DbContextOptions<MazeContext>()))
-            {
-                return ctx.TvShows;
-            }
+            return _dbContext.TvShows;
         }
 
         public IEnumerable<TvShow> GetAllPaginated(int skip, int take)
         {
-            using (var ctx = new MazeContext(new DbContextOptions<MazeContext>()))
-            {
-                return ctx.TvShows.Skip(skip).Take(take);
-            }
+            return _dbContext.TvShows.Skip(skip).Take(take);
+            
         }
+
+     
+
+       
+     
     }
 }
