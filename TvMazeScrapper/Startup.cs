@@ -40,5 +40,6 @@ namespace TvMazeScrapper
 
             app.UseMvc();
         }
+        
     }
 }

@@ -13,9 +13,9 @@ namespace TvMazeScrapper.Context
         {
             
         }
-         DbSet<TvShow> TvShows { get; set; }
+      public   DbSet<TvShow> TvShows { get; set; }
 
-         DbSet<CastMember> CastMembers { get; set; }
+       public  DbSet<CastMember> CastMembers { get; set; }
 
     }
 }
