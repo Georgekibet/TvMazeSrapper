@@ -14,7 +14,7 @@ namespace TvMazeScrapper.Controllers
         [HttpGet]
         public ActionResult<IEnumerable<string>> Get()
         {
-            return new string[] { "value1", "value2" };
+            return new string[] { "api/shows/recordsperpage/page   e.g http://localhost:18338/api/shows/50/1" };
         }
 
         // GET api/values/5

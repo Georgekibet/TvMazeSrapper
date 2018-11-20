@@ -8,7 +8,7 @@ namespace TvMazeScrapper.Core.Models
     {
         [DatabaseGeneratedAttribute(DatabaseGeneratedOption.Identity), Key]
         public int Id { get; set; }
-     
+        public int CastMemberId { get; set; }
         public int ShowId { get; set; }
         public string Name { get; set; }
         public DateTime BirthDay { get; set; }

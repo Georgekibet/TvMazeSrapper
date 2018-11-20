@@ -12,6 +12,7 @@ namespace TvMazeScrapper.Core.Repository
 
        IEnumerable<TvShow> GetAll();
        int GetCount();
+       int GetLatestId();
        IEnumerable<TvShow> GetAllPaginated(int skip,int take);
        
    }

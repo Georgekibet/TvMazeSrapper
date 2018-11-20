@@ -27,6 +27,8 @@ namespace TvMazeScrapper.Migrations
 
                     b.Property<DateTime>("BirthDay");
 
+                    b.Property<int>("CastMemberId");
+
                     b.Property<string>("Name");
 
                     b.Property<int>("ShowId");

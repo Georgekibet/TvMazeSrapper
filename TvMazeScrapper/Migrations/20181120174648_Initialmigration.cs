@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace TvMazeScrapper.Migrations
 {
-    public partial class InitialMigration : Migration
+    public partial class Initialmigration : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -26,6 +26,7 @@ namespace TvMazeScrapper.Migrations
                 {
                     Id = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
+                    CastMemberId = table.Column<int>(nullable: false),
                     ShowId = table.Column<int>(nullable: false),
                     Name = table.Column<string>(nullable: true),
                     BirthDay = table.Column<DateTime>(nullable: false),

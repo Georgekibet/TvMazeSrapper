@@ -10,8 +10,8 @@ using TvMazeScrapper.Context;
 namespace TvMazeScrapper.Migrations
 {
     [DbContext(typeof(MazeContext))]
-    [Migration("20181120000230_InitialMigration")]
-    partial class InitialMigration
+    [Migration("20181120174648_Initialmigration")]
+    partial class Initialmigration
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -28,6 +28,8 @@ namespace TvMazeScrapper.Migrations
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                     b.Property<DateTime>("BirthDay");
+
+                    b.Property<int>("CastMemberId");
 
                     b.Property<string>("Name");
 

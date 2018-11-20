@@ -19,10 +19,7 @@ namespace TvMazeScrapper.Core.Repository.Impl
         {
            _dbContext = dbContext;
         }
-        private TvShowRepository()
-        {
-           
-        }
+    
 
         public void Save(TvShow tvShow)
         {
@@ -45,6 +42,12 @@ namespace TvMazeScrapper.Core.Repository.Impl
         public int GetCount()
         {
             return _dbContext.TvShows.Count();
+        }
+
+        public int GetLatestId()
+        {
+            return _dbContext.TvShows.Max(s => s.Id);
+           
         }
 
         public IEnumerable<TvShow> GetAllPaginated(int skip, int take)
