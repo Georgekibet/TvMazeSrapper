@@ -40,12 +40,12 @@ namespace TvMazeScrapper.Scrapper
                 {
                     var data = await client.GetStringAsync($"shows/{tvShow.Id}/cast");
                     var d = JsonConvert.DeserializeObject<List<CastJsonClass>>(data);
-                    List<CastMember> cast = d.Select(
+                    List<CastMember> cast = d.Distinct().Select(
                         c => new CastMember()
                         {
-                            Id = c.Person.Id,
+                          // Id = c.Person.Id,
                             ShowId = tvShow.Id,
-                          BirthDay = c.Person.Birthday,
+                            BirthDay = c.Person.Birthday,
                             Name = c.Person.Name
                         }).ToList();
                     
@@ -59,7 +59,7 @@ namespace TvMazeScrapper.Scrapper
 
         private  void SaveToDb(TvShow show)
         {
-            Task.Run(() => { _tvShowRepository.Save(show); });
+            _tvShowRepository.Save(show); 
         }
     }
 
