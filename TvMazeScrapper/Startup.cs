@@ -77,8 +77,13 @@ namespace TvMazeScrapper
             }
           
             app.UseMvc();
-            
-            
+            using (var serviceScope = app.ApplicationServices.GetRequiredService<IServiceScopeFactory>().CreateScope())
+            {
+                var context = serviceScope.ServiceProvider.GetService <MazeContext> ();
+                if (!context.Database.EnsureCreated())
+                    context.Database.Migrate();
+            }
+
         }
         
     }
